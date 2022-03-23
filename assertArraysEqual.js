@@ -5,7 +5,7 @@ const assertEqual = function(actual, expected) {
   return result;
 };
 
-const assertArraysEqual = function(array1, array2) {
+const eqArrays = function(array1, array2) {
   let i = 0;
   let same = true;
   while (same && i < array1.length) {
@@ -13,15 +13,18 @@ const assertArraysEqual = function(array1, array2) {
     same = array1[i] === array2[i] ? same : false;
     i++;
   }
-  return console.log(same = same === true ? 'arrays are identical' : 'arrays are not identical')
+  return same
 };
 
+function assertArraysEqual(eqArrays) {
+  return console.log(eqArrays = eqArrays === true ? 'arrays are identical' : 'arrays are not identical')
+}
 
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
 
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
+assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3])); // => true
+assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1])); // => false
+assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
+assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 
-assertEqual(assertArraysEqual([1, 2, 3], [1, 2, 3]), true); // => should PASS
