@@ -24,9 +24,25 @@ const assertArraysEqual =  function(array1, array2) {
   return console.log(same)
 };
 
+const without = function(array,remove){
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
+  var withoutArray = array
+  for (let i = 0; i < remove.length; i++) { //loops through the remove array 
+    //filters everything that is NOT a match and reassigns the without array
+    withoutArray = withoutArray.filter (element => element !== remove[i])  
+  } return withoutArray
+}
+
+
+//TEST CASES
+
+console.log(without([1, 2, 3], [1])) // => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+
+
+// Make sure the original array was not altered by the without function
+const words = ["hello", "world", "lighthouse"];
+console.log(without(words, ["lighthouse"])); // => ["hello", "world"]
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
 
