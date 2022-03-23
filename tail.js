@@ -3,3 +3,4 @@ const tail = function(array) {
 };
 
 console.log(tail([0,1,2,3,4,5]));
+
