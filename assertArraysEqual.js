@@ -13,15 +13,15 @@ const eqArrays =  function(array1, array2) {
     same = array1[i] === array2[i] ? same : false;
     i++;
   }
-  return same
+  return same;
 };
 
 
 
 const assertArraysEqual =  function(array1, array2) {
-  var same = eqArrays(array1,array2)
-  same = same === true ? 'arrays are identical' : 'arrays are not identical'
-  return console.log(same)
+  let same = eqArrays(array1,array2);
+  same = same === true ? 'arrays are identical' : 'arrays are not identical';
+  return console.log(same);
 };
 
 

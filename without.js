@@ -13,31 +13,31 @@ const eqArrays =  function(array1, array2) {
     same = array1[i] === array2[i] ? same : false;
     i++;
   }
-  return same
+  return same;
 };
 
 
 
 const assertArraysEqual =  function(array1, array2) {
-  var same = eqArrays(array1,array2)
-  same = same === true ? 'arrays are identical' : 'arrays are not identical'
-  return console.log(same)
+  let same = eqArrays(array1,array2);
+  same = same === true ? 'arrays are identical' : 'arrays are not identical';
+  return console.log(same);
 };
 
-const without = function(array,remove){
+const without = function(array,remove) {
 
-  var withoutArray = array
-  for (let i = 0; i < remove.length; i++) { //loops through the remove array 
+  let withoutArray = array;
+  for (let i = 0; i < remove.length; i++) { //loops through the remove array
     //filters everything that is NOT a match and reassigns the without array
-    withoutArray = withoutArray.filter (element => element !== remove[i])  
-  } return withoutArray
-}
+    withoutArray = withoutArray.filter(element => element !== remove[i]);
+  } return withoutArray;
+};
 
 
 //TEST CASES
 
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+console.log(without([1, 2, 3], [1])); // => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
 
 
 // Make sure the original array was not altered by the without function
