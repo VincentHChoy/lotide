@@ -1,10 +1,12 @@
 
 const countLetters = function(sentence) {
+  sentence = sentence.split('').filter(x => x !== ' ');
+  console.log(sentence);
   let output = {};
   for (const letter of sentence) {
     if (output[letter]) { // assumes it exists in the object
       output[letter]++;
-    } else {
+    } else  {
       output[letter] = 1;
     }
   }
