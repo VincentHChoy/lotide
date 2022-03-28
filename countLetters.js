@@ -1,4 +1,3 @@
-
 const countLetters = function(sentence) {
   sentence = sentence.split('').filter(x => x !== ' ');
   console.log(sentence);

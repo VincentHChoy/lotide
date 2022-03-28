@@ -1,10 +1,6 @@
 
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  // comparing the two inputs and assiging result the outcome
-  let result = actual === expected ? `😎😎😎 Assertion Passed: ${actual} === ${expected}` : `🤔🤔🤔 Assertion Failed: ${actual} !== ${expected}`;
-  return result;
-};
+const assertEqual = require('./assertEqual.js')
 
 
 const findKeyByValue = function(object, prop) {
@@ -25,5 +21,5 @@ const bestTVShowsByGenre = {
 };
 
 console.log(findKeyByValue(bestTVShowsByGenre,"The Expanse"));
-console.log(assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"));
-console.log(assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined));
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);

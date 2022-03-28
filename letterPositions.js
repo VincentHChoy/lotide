@@ -1,19 +1,5 @@
-const eqArrays = function(array1, array2) {
-  let i = 0;
-  let same = true;
-  while (same && i < array1.length) {
-    // console.log(assertEqual(array1[i], array2[i]))
-    same = array1[i] === array2[i] ? same : false;
-    i++;
-  }
-  return same;
-};
-
-const assertArraysEqual = function(array1, array2) {
-  let same = eqArrays(array1, array2);
-  same = same === true ? 'arrays are identical' : 'arrays are not identical';
-  return console.log(same);
-};
+//importing
+const assertArraysEqual = require('./assertArraysEqual')
 
 
 const letterPositions = function(sentence) {

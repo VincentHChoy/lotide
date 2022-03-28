@@ -1,4 +1,3 @@
-
 // IMPORTING EQ OBJECTS AND THE FUNCTIONS IT CALLS BACK
 const eqObjects = require('./eqObjects.js');
   

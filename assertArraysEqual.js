@@ -1,15 +1,5 @@
 // FUNCTION IMPLEMENTATION
-const eqArrays =  function(array1, array2) {
-  let i = 0;
-  let same = true;
-  while (same && i < array1.length) {
-    // console.log(assertEqual(array1[i], array2[i]))
-    same = array1[i] === array2[i] ? same : false;
-    i++;
-  }
-  return same;
-};
-
+const eqArrays =  require('./eqArrays.js')
 
 
 const assertArraysEqual =  function(array1, array2) {

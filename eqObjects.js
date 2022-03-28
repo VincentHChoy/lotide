@@ -1,12 +1,5 @@
-const eqArrays = require('./eqArrays.js');
-// console.log(`this is eqArrays ${eqArrays([1, 2, 3], [1, 2, 3])}`)
 // Import
-
-//modifed eqArrays to account for the difference in lengths
-
-
-
-
+const eqArrays = require('./eqArrays.js');
 
 
 //IMPLEMENT FUNCTIONS
@@ -33,22 +26,12 @@ const eqObjects = function(object1, object2) {
   object2 = sortKeys(object2);
   let obj1Keys = Object.keys(object1); // puts all object keys into an array and flattens in case of arrays, and sorts
   let obj2Keys = Object.keys(object2);
-  // let obj1Values = Object.values(object1); //puts all object arrays into, and flattens in case of arrays, and sorts
-  // let obj2Values = Object.values(object2);
-  console.log(obj1Keys);
-  console.log(obj2Keys);
-  // console.log(obj1Values);
-  // console.log(obj2Values);
   let equal = true;
   // check for arrays
   if (eqArrays(obj1Keys, obj2Keys)) { // compare array of keys
     
     console.log(`keys match`);
-    // console.log(eqArrays(obj1Values, obj2Values));
     for (const key in object1) {
-      // console.log(object1[key])
-      // console.log(object2[key])
-      // console.log(Array.isArray(object1[key]))
       
       if (Array.isArray(object1[key])) {
         console.log('comparing arrays');
