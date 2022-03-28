@@ -8,7 +8,8 @@ const assertEqual = function(actual, expected) {
 const eqArrays = function(array1, array2) {
   let i = 0;
   let same = true;
-  while (same && i < array1.length) {
+  const largerLength = array1 > array2 ? array1.length : array2.length;
+  while (same && i < largerLength) {
     // console.log(assertEqual(array1[i], array2[i]))
     same = array1[i] === array2[i] ? same : false;
     i++;
@@ -16,7 +17,7 @@ const eqArrays = function(array1, array2) {
   return same;
 };
 
-
+module.exports = eqArrays;
 
 eqArrays([1, 2, 3], [1, 2, 3]); // => true
 eqArrays([1, 2, 3], [3, 2, 1]); // => false

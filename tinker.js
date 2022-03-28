@@ -1,28 +1,23 @@
-// const sortKeys = function (initialObject){ // sorts objects by key
-//   sorted = Object.keys(initialObject) // sorts by keys alphabetically
-//     .sort()   //[a,b,c,d]
-//     .reduce(function (previousValue, currentValue) {
-//       // console.log(currentValue)
-//       // console.log(previousValue)
-//         previousValue[currentValue] = initialObject[currentValue]; // initial value of empty object, emptyobject.a = notSorted.a => object.b = notsorted.b
-//         return previousValue;
-//     }, {});             // intial value is an empty object
-// return sorted
-// }
-// notSorted = {b: false, a: true, c:1, d:15};
+// sum all number in array recursively
 
-//IMPLEMENT FUNCTIONS
-const sortKeys = function (initialObject) { // sorts objects by key
-  const sorted = Object.keys(initialObject)
-    .sort()
-    .reduce((prevValue, currentValue)=>{
-      prevValue[currentValue] = initialObject[currentValue]
-      return prevValue
-    },
-      {}
-    )
-return sorted
-}
-notSorted = { b: false, a: true, c: 1, d: 15 };
+const array = [2,4,6];
 
-console.log(sortKeys(notSorted))
+const sumNumbers = function(array,output = []) {
+  if (array.length === 0) {
+    return 0;
+  } else {
+    return array[0] + sumNumbers(array.slice(1));
+  }
+};
+
+
+const countNumbers = function(array) {
+  if (array.length === 0) {
+    return 0;
+  } else {
+    return 1 + countNumbers(array.slice(1));
+  }
+};
+
+console.log(sumNumbers(array));
+console.log(countNumbers(array));

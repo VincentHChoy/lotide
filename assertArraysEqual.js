@@ -1,10 +1,4 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  // comparing the two inputs and assiging result the outcome
-  let result = actual === expected ? `😎😎😎 Assertion Passed: ${actual} === ${expected}` : `🤔🤔🤔 Assertion Failed: ${actual} !== ${expected}`;
-  return result;
-};
-
 const eqArrays =  function(array1, array2) {
   let i = 0;
   let same = true;
@@ -24,9 +18,10 @@ const assertArraysEqual =  function(array1, array2) {
   return console.log(same);
 };
 
+module.exports = assertArraysEqual;
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
+// assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
+// assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
+// assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
+// assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
 

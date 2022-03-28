@@ -1,3 +1,5 @@
 {
-  "type": "module"
+  "dependencies": {
+    "util": "^0.12.4"
+  }
 }
