@@ -12,6 +12,4 @@ const countLetters = function(sentence) {
   return output;
 };
 
-module.exports = countLetters
-
-// console.log(countLetters("lighthouse in the house"));
+module.exports = countLetters;

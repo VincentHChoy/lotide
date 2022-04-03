@@ -1,6 +1,4 @@
 // FUNCTION IMPLEMENTATION
-
-
 const eqArrays = function(array1, array2) {
   let i = 0;
   let same = true;

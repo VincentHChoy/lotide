@@ -1,5 +1,5 @@
 // ACTUAL FUNCTION
-const middle = function (array) {
+const middle = function(array) {
   if (array.length <= 2) {
     return 'please provide an array with 3 or more elements';
   }
