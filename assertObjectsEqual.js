@@ -1,8 +1,6 @@
 // IMPORTING EQ OBJECTS AND THE FUNCTIONS IT CALLS BACK
 const eqObjects = require('./eqObjects.js');
   
-  
-
 //IMPLMENTING ASSERT OBJECTS EQUAL
 
 const assertObjectsEqual =  function(object1, object2) {
@@ -12,11 +10,13 @@ const assertObjectsEqual =  function(object1, object2) {
   return console.log(same);
 };
 
+module.exports = assertObjectsEqual
+
   
-const ab = { b: "1", a: ["1", 2] };
-const ba = { a: ["1", 2], b: "1" };
-// console.log(eqObjects(ab, ba)); // => true
-assertObjectsEqual(ab,ba);
+// const ab = { b: "1", a: ["1", 2] };
+// const ba = { a: ["1", 2], b: "1" };
+// // console.log(eqObjects(ab, ba)); // => true
+// assertObjectsEqual(ab,ba);
   
 // const cd = { c: "1", d: ["2", 3] };
 // const dc = { d: ["2", 3], c: "1" };

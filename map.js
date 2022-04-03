@@ -13,6 +13,9 @@ const map = function(array, callback) {
   return results;
 };
 
+module.exports = map
+
+
 //test cases
 // assertArraysEqual(map(words,word => word[0]),['g','c','t','m','t'])
 // assertArraysEqual(map(words,word => word.toUpperCase()),['GROUND','CONTROL','TO','MAJOR','TOM'])
