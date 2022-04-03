@@ -1,23 +1,23 @@
-// sum all number in array recursively
-
-const array = [2,4,6];
-
-const sumNumbers = function(array,output = []) {
-  if (array.length === 0) {
-    return 0;
-  } else {
-    return array[0] + sumNumbers(array.slice(1));
+// Super class
+class Person {
+  constructor(name, quirkyFact) {
+    this.name = name;
+    this.quirkyFact = quirkyFact;
   }
-};
 
-
-const countNumbers = function(array) {
-  if (array.length === 0) {
-    return 0;
-  } else {
-    return 1 + countNumbers(array.slice(1));
+  bio() {
+    return `My name is ${this.name} and here's my quirky fact: ${this.quirkyFact}`;
   }
-};
+}
 
-console.log(sumNumbers(array));
-console.log(countNumbers(array));
+class Student extends Person {
+  bio() {
+    return super.bio()
+  }
+
+}
+
+// DRIVER CODE
+
+const bob = new Student('Bob Ross', 'I like mountains way too much');
+console.log(bob.bio());

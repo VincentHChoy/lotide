@@ -5,16 +5,16 @@ const eqArrays = require('./eqArrays.js');
 //IMPLEMENT FUNCTIONS
 const sortKeys = function(initialObject) { // sorts objects by key
   const sorted = Object.keys(initialObject)
-    .sort()
+    .sort() //[a,b,c,d]
     .reduce((prevValue, currentValue) => {
-      prevValue[currentValue] = initialObject[currentValue];
+      prevValue[currentValue] = initialObject[currentValue]; //inital value is an empty object {}, so {}.a = initalobject.a
       return prevValue;
     },
     {}
     );
   return sorted;
 };
-notSorted = { b: false, a: true, c: 1, d: 15 };
+// notSorted = { b: false, a: true, c: 1, d: 15 };
 
 
 
@@ -24,7 +24,7 @@ notSorted = { b: false, a: true, c: 1, d: 15 };
 const eqObjects = function(object1, object2) {
   object1 = sortKeys(object1);
   object2 = sortKeys(object2);
-  let obj1Keys = Object.keys(object1); // puts all object keys into an array and flattens in case of arrays, and sorts
+  let obj1Keys = Object.keys(object1); // puts all object keys into an array
   let obj2Keys = Object.keys(object2);
   let equal = true;
   // check for arrays
