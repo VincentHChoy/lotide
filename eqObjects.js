@@ -9,7 +9,7 @@ const sortKeys = function(initialObject) { // sorts objects by key
       prevValue[currentValue] = initialObject[currentValue]; //inital value is an empty object {}, so {}.a = initalobject.a
       return prevValue;
     },
-    {}
+    {} // inital object
     );
   return sorted;
 };
