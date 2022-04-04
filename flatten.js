@@ -12,9 +12,5 @@ const flatten = function(array, output = []) {
   return output
 };
 
-console.log(flatten([1, 2, [3, '4'],'dog', [6]])); // => [1, 2, 3, '4', 'dog', 6]
-
-// console.log([1,2].concat([3,'4']))
-
 module.exports = flatten;
 
